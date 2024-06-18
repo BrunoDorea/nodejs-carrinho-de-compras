@@ -4,7 +4,7 @@ async function addItem(userCart, item) {
   userCart.push(item);
 }
 
-// Calcular o total
+// ✅ Calcular o total
 async function calculateTotal(userCart) {
   console.log("🛒 Total do carrinho é:")
 
@@ -12,10 +12,15 @@ async function calculateTotal(userCart) {
   console.log(`🎁 Total: ${result}`);
 }
 
-// Deletar item do carrinho
-async function deleteItem(useCart, name) {}
+// ✅ Deletar item do carrinho
+async function deleteItem(userCart, name) {
+  const index = userCart.findIndex((item) => item.name === name);
+  if(index !== -1) {
+    userCart.splice(index, 1)
+  }
+}
 
 // Remover item do carrinho
-async function removeItem(useCart, index) {}
+async function removeItem(userCart, index) {}
 
 export { addItem, calculateTotal, deleteItem, removeItem }

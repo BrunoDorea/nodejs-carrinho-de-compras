@@ -15,4 +15,7 @@ await cartService.addItem(myCart, item1)
 await cartService.addItem(myCart, item2)
 await cartService.addItem(myWishList, item3)
 
+await cartService.deleteItem(myCart, item2.name)
+
+
 await cartService.calculateTotal(myCart)
